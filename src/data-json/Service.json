@@ -1,0 +1,135 @@
+[
+  {
+    "id": 1,
+    "icon": "mdi-cogs",
+    "ServiceTitel": "MECHANICAL 2D DRAFTING",
+    "ServiceText": "Research and Development of new products, or modifications to existing products. We are more than capable of creating 3D models to Technical Drawings for Prototyping or Manufacture. Our local knowledge of manufacturing processes and suppliers makes us ideal for prototyping building and sourcing of manufacturers."
+  },
+  {
+    "id": 2,
+    "icon": "mdi-rotate-3d",
+    "ServiceTitel": "3D MODELING & RENDERING",
+    "ServiceText": "Furniture Renders, Interiors Renders, Fabricated Parts Renders, Exploded View Renders, Electrical Enclosure Renders, Electronics Renders, Consumer Product Renders. Cost effective options from quick renders for proposals, all the way to photorealistic images for advertising and other publications."
+  },
+  {
+    "id": 3,
+    "icon": "mdi-transition",
+    "ServiceTitel": "3D PRODUCT ANIMATION",
+    "ServiceText": "Product Catalogues, Instruction Manuals, Product Artwork, Brochures, Installation Manuals, Adverts and Flyers. We have years of experience in this field with a background in Engineering practices along with Graphic Design to create beautiful and technically accurate documentation from idea generation to publication."
+  },
+  {
+    "id": 4,
+    "icon": "mdi-file-cad-box",
+    "ServiceTitel": "MECHANICAL CAD DRAFTING",
+    "ServiceText": "Affordable business websites that generate revenue and don't cost an arms and a leg. Our specialty is functional business websites with direct results in generating leads."
+  },
+  {
+    "id": 5,
+    "icon": "mdi-webhook",
+    "ServiceTitel": "PROTOTYPING & RAPID PROTOTYPING",
+    "ServiceText": "Mercedes"
+  },
+  {
+    "id": 6,
+    "icon": "mdi-rename-box",
+    "ServiceTitel": "PRODUCT DESIGN & DEVELOPMENT",
+    "ServiceText": "Mercedes"
+  },
+  {
+    "id":7,
+    "icon": "mdi-pipe",
+    "ServiceTitel": "PIPING DESIGN & DRAFTING",
+    "ServiceText": "Mercedes"
+  },
+  {
+    "id":8,
+    "icon": "mdi-script",
+    "ServiceTitel": "SHEET METAL DESIGN",
+    "ServiceText": "Mercedes"
+  },
+
+  {
+    "id":10,
+    "icon": "mdi-motion-play",
+    "ServiceTitel": "CAD AUTOMATION",
+    "ServiceText": "Mercedes"
+  },
+  {
+    "id":11,
+    "icon": "mdi-car",
+    "ServiceTitel": "AUTOMOTIVE DESIGN & STYLING",
+    "ServiceText": "Mercedes"
+  },
+  {
+    "id":12,
+    "icon": "mdi-factory",
+    "ServiceTitel": "DESIGN FOR MANUFACTURING (DFM)",
+    "ServiceText": "Mercedes"
+  },
+  {
+    "id":13,
+    "icon": "mdi-wrench-cog",
+    "ServiceTitel": "PLANT DESIGN MANAGEMENT SYSTEM (PDMS)",
+    "ServiceText": "Mercedes"
+  },
+  {
+    "id":14,
+    "icon": "mdi-webpack",
+    "ServiceTitel": "3D PART MODELING SERVICES",
+    "ServiceText": "Mercedes"
+  },
+  {
+    "id":15,
+    "icon": "mdi-graph",
+    "ServiceTitel": "SCANNING & MEASUREMENT",
+    "ServiceText": "Mercedes"
+  },
+  {
+    "id":16,
+    "icon": "mdi-dots-circle",
+    "ServiceTitel": "FINITE ELEMENT ANALYSIS (FEA)",
+    "ServiceText": "Mercedes"
+  },
+  {
+    "id":17,
+    "icon": "mdi-wrench",
+    "ServiceTitel": "VALUE ENGINEERING SERVICES",
+    "ServiceText": "Mercedes"
+  },
+  {
+    "id":18,
+    "icon": "mdi-cogs",
+    "ServiceTitel": "JIGS & FIXTURE DESIGN",
+    "ServiceText": "Mercedes"
+  },
+  {
+    "id":19,
+    "icon": "mdi-eiffel-tower",
+    "ServiceTitel": "TOWER DESIGN",
+    "ServiceText": "Mercedes"
+  },
+  {
+    "id":20,
+    "icon": "mdi-film",
+    "ServiceTitel": "PRODUCT ENGINEERING & DEVELOPMENT",
+    "ServiceText": "Mercedes"
+  },
+  {
+    "id":21,
+    "icon": "mdi-state-machine",
+    "ServiceTitel": "MACHINE ASSEMBLY ANIMATION",
+    "ServiceText": "Mercedes"
+  },
+  {
+    "id":22,
+    "icon": "mdi-cog-sync",
+    "ServiceTitel": "REVERSE ENGINEERING",
+    "ServiceText": "Mercedes"
+  },
+  {
+    "id":23,
+    "icon": "mdi-face-agent",
+    "ServiceTitel": "MANUFACTURING SUPPORT & PROCESS PLANNING",
+    "ServiceText": "Mercedes"
+  }
+]
