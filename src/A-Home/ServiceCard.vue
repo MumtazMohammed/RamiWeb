@@ -173,6 +173,7 @@ export default {
     margin-bottom: 15px;
     @media (max-width: 600px) {
       margin-bottom: 10px;
+      font-size: 17px !important;
     }
   }
   .title::after {

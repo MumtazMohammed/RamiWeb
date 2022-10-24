@@ -75,11 +75,11 @@ export default {
 
 h1 {
   text-align: center;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 600;
   font-family: $fontfamliy;
   span.typed-text {
-    color: $fontcolorlinks;
+    color: #f57f17;
   }
 }
 

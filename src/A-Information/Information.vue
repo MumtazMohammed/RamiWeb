@@ -35,7 +35,7 @@
               <!-- video  -->
               <v-expand-transition>
                 <v-col cols="12" class="pa-0" v-show="show">
-                  <v-card-text>
+                  <v-card-text class="text-center pa-0">
                     <iframe
                       width="350"
                       height="215"
@@ -134,6 +134,9 @@
               </v-col>
 
               <v-col cols="12">
+                <v-card-title class="justify-center pb-2 titel-down">
+                  AUTOMOTIVE DESIGN & STYLING
+                </v-card-title>
                 <v-card-text class="Service_text py-2 px-1">
                   <v-subheader
                     style="height: 30px"
@@ -256,16 +259,26 @@ export default {
   padding-bottom: 30px;
   .card-box {
     @media (max-width: 700px) {
-      max-width: 98% !important;
+      max-width: 96% !important;
     }
   }
   .subheader-titel {
-    font-family: serif;
+    font-family: $fontfamliy;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    @media (max-width: 550px) {
+      font-size: 14px;
+    }
+  }
+  .titel-down {
+    font-family: $fontfamliy;
     font-size: 20px;
     letter-spacing: 1px;
     font-weight: 600;
+    color: #f57f1782;
     @media (max-width: 550px) {
-      font-size: 14px;
+      font-size: 17px;
     }
   }
   .Service_text {

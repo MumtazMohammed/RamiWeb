@@ -5,7 +5,7 @@
       <v-subheader class="justify-center titel-welcom">
         <TypeEfect />
       </v-subheader>
-      <v-card-text class="ma-0 text-welcom">
+      <v-card-text class="ma-0 pt-0 text-welcom">
         LEADING ENGINEERING CAD DESIGN AND DRAFTING SERVICES PROVIDER IN
         AUSTRALIA LEADING ENGINEERING CAD DESIGN AND DRAFTING SERVICES PROVIDER
         IN AUSTRALIA LEADING ENGINEERING CAD DESIGN AND DRAFTING SERVICES
@@ -34,7 +34,7 @@ export default {
 .selection {
   width: 100%;
   margin-top: 140px;
-  min-height: 50vh;
+  min-height: 45vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,17 +48,7 @@ export default {
     color: $fontcolorlinks;
     position: relative;
   }
-  .titel-welcom::after {
-    content: "";
-    position: absolute;
-    width: 70px;
-    height: 5px;
-    bottom: -2px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #f57f17;
-    border-radius: 50px;
-  }
+
   .text-welcom {
     font-family: $fontfamliy !important;
     font-size: 17px;
@@ -83,7 +73,7 @@ export default {
     transform: translateY(-50%);
     right: 0;
     color: #eceff1;
-    opacity: 0.6;
+    opacity: 0.4;
     @media (max-width: 900px) {
       font-size: 300px;
     }

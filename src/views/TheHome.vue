@@ -16,9 +16,12 @@
       <template v-slot:extension>
         <v-tabs
           dark
+          active-class=" yellow--text font-weight-medium text--darken-4"
           show-arrows=""
           center-active
-          slider-size="4"
+          centered
+          grow
+          slider-size="2"
           slider-color="yellow darken-4"
           align-with-title
         >
@@ -193,6 +196,16 @@ export default {
 @import "@/scss/virables";
 @import "@/scss/mixin";
 .tab {
+  color: $fontcolorlinks !important;
+  font-family: $fontfamliy;
+  letter-spacing: 1px;
+  font-size: 16px !important;
+  text-transform: uppercase;
+  @media (max-width: 700px) {
+    font-size: 13px !important;
+  }
+}
+.tab-active {
   color: $fontcolorlinks !important;
   font-family: $fontfamliy;
   letter-spacing: 1px;
