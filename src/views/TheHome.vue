@@ -21,7 +21,7 @@
           center-active
           centered
           grow
-          slider-size="2"
+          slider-size="2.5"
           slider-color="yellow darken-4"
           align-with-title
         >
@@ -236,7 +236,7 @@ export default {
 }
 ::v-deep .v-toolbar--prominent:not(.v-toolbar--bottom) .v-toolbar__title {
   @media (max-width: 700px) {
-    max-width: 15git init0px !important;
+    max-width: 150px !important;
   }
 }
 ::v-deep .v-slide-group__prev {

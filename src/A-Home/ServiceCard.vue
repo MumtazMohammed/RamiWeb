@@ -167,7 +167,7 @@ export default {
     color: $fontcolorlinks;
     font-weight: 600;
     font-size: 20px !important;
-    letter-spacing: 1px;
+    letter-spacing: 1px !important;
     text-transform: uppercase;
     position: relative;
     margin-bottom: 15px;

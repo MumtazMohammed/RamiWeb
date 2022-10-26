@@ -1,7 +1,13 @@
 <template>
-  <div class="container">
+  <div class="">
     <h1>
-      <span class="typed-text">{{ typeValue }}</span>
+      <!-- <span class="typed-text">{{ typeValue }}</span> -->
+      <h1>
+        We Help
+        <span class="typed-text">{{ typeValue }}</span>
+        <span class="blinking-cursor">|</span>
+        <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span>
+      </h1>
     </h1>
   </div>
 </template>
@@ -74,16 +80,85 @@ export default {
 @import "@/scss/mixin";
 
 h1 {
-  text-align: center;
+  text-align: start;
   font-size: 24px;
   font-weight: 600;
   font-family: $fontfamliy;
+  text-transform: capitalize;
+  @media (max-width: 700px) {
+    font-size: 20px;
+  }
   span.typed-text {
     color: #f57f17;
+    position: relative;
+  }
+  span.typed-text::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 2px;
+    background-color: #f57f17;
+    border-radius: 50px;
   }
 }
 
 // Cursor blinking CSS Starts...
-
-// Cursor blinking CSS Ends...
+.blinking-cursor {
+  font-size: 24px;
+  color: #555555;
+  opacity: 0.7;
+  -webkit-animation: 0.5s blink step-end infinite;
+  -moz-animation: 0.5s blink step-end infinite;
+  -ms-animation: 0.5s blink step-end infinite;
+  -o-animation: 0.5s blink step-end infinite;
+  animation: 0.5s blink step-end infinite;
+}
+@keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: #555555;
+  }
+}
+@-moz-keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: #555555;
+  }
+}
+@-webkit-keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: #555555;
+  }
+}
+@-ms-keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: #555555;
+  }
+}
+@-o-keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: #555555;
+  }
+}
 </style>

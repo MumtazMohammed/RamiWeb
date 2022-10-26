@@ -192,7 +192,7 @@
                   >
                     Lorem ipsum dolor
                   </v-subheader>
-                  <ul>
+                  <ul class="pl-2">
                     <li>Excepteur sint occaecat cupidatat non proident</li>
                     <li>Excepteur sint occaecat cupidatat non proident</li>
                     <li>Excepteur sint occaecat cupidatat non proident</li>
@@ -273,10 +273,10 @@ export default {
   }
   .titel-down {
     font-family: $fontfamliy;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 1px;
-    font-weight: 600;
-    color: #f57f1782;
+    font-weight: 500;
+    color: $fontcolorlinks !important;
     @media (max-width: 550px) {
       font-size: 17px;
     }
@@ -286,9 +286,9 @@ export default {
     font-family: $fontfamliy;
     font-size: 16px;
     line-height: 1.5;
-    color: $fontcolorlinks;
+    color: #999;
     @media (max-width: 750px) {
-      font-size: 14px;
+      font-size: 15px;
     }
   }
   .Service_titel {
@@ -296,7 +296,7 @@ export default {
     font-family: $fontfamliy;
     font-size: 17px;
     @media (max-width: 750px) {
-      font-size: 15px;
+      font-size: 16px;
     }
   }
   .YesItHover {

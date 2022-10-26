@@ -2,10 +2,13 @@
   <div class="selection">
     <v-container class="pa-0">
       <v-icon class="icon">mdi-cog</v-icon>
-      <v-subheader class="justify-center titel-welcom">
+      <h1 class="welcome-titel px-2">
+        Welcome to <span class="yellow--text text--darken-4">Cad</span>elaie
+      </h1>
+      <v-subheader class="px-2 titel-welcom">
         <TypeEfect />
       </v-subheader>
-      <v-card-text class="ma-0 pt-0 text-welcom">
+      <v-card-text class="ma-0 pa-2 text-welcom">
         LEADING ENGINEERING CAD DESIGN AND DRAFTING SERVICES PROVIDER IN
         AUSTRALIA LEADING ENGINEERING CAD DESIGN AND DRAFTING SERVICES PROVIDER
         IN AUSTRALIA LEADING ENGINEERING CAD DESIGN AND DRAFTING SERVICES
@@ -34,7 +37,7 @@ export default {
 .selection {
   width: 100%;
   margin-top: 140px;
-  min-height: 45vh;
+  min-height: 43vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,6 +51,17 @@ export default {
     color: $fontcolorlinks;
     position: relative;
   }
+  .welcome-titel {
+    font-family: $fontfamliy !important;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: $fontcolorlinks;
+    position: relative;
+    text-transform: capitalize;
+    @media (max-width: 700px) {
+      font-size: 25px;
+    }
+  }
 
   .text-welcom {
     font-family: $fontfamliy !important;
@@ -58,7 +72,7 @@ export default {
     position: relative;
     z-index: 1;
     line-height: 1.5;
-    text-align: center;
+    text-align: justify;
     @media (max-width: 900px) {
       font-size: 15px;
     }
