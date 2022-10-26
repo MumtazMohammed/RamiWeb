@@ -16,13 +16,13 @@
       <template v-slot:extension>
         <v-tabs
           dark
-          active-class=" yellow--text font-weight-medium text--darken-4"
+          active-class=" light-blue--text font-weight-medium text--lighten-1"
           show-arrows=""
           center-active
           centered
           grow
           slider-size="2.5"
-          slider-color="yellow darken-4"
+          slider-color="light-blue lighten-1"
           align-with-title
         >
           <v-tab

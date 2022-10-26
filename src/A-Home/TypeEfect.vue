@@ -89,7 +89,7 @@ h1 {
     font-size: 20px;
   }
   span.typed-text {
-    color: #f57f17;
+    color: #29B6F6;
     position: relative;
   }
   span.typed-text::after {
@@ -100,7 +100,7 @@ h1 {
     transform: translateX(-50%);
     width: 100%;
     height: 2px;
-    background-color: #f57f17;
+    background-color: #29B6F6;
     border-radius: 50px;
   }
 }

@@ -3,7 +3,7 @@
     <v-container class="pa-0">
       <v-icon class="icon">mdi-cog</v-icon>
       <h1 class="welcome-titel px-2">
-        Welcome to <span class="yellow--text text--darken-4">Cad</span>elaie
+        Welcome to <span class="light-blue--text text--lighten-1">Cad</span>elaie
       </h1>
       <v-subheader class="px-2 titel-welcom">
         <TypeEfect />
@@ -57,7 +57,7 @@ export default {
     letter-spacing: 1px;
     color: $fontcolorlinks;
     position: relative;
-    text-transform: capitalize;
+    text-transform: uppercase;
     @media (max-width: 700px) {
       font-size: 25px;
     }

@@ -3,7 +3,7 @@
     <v-card flat tile>
       <v-toolbar color="blue-grey lighten-5" dark extended flat>
         <v-btn icon to="/">
-          <v-icon class="yellow--text text--darken-4" size="36">
+          <v-icon class="light-blue--text text--lighten-1" size="36">
             mdi-arrow-left-thin
           </v-icon>
         </v-btn>
