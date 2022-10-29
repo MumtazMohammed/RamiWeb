@@ -1,5 +1,5 @@
 <template>
-  <div class="Section">
+  <div class="Section-info">
     <v-card flat tile>
       <v-toolbar color="blue-grey lighten-5" dark extended flat>
         <v-btn icon to="/">
@@ -8,19 +8,14 @@
           </v-icon>
         </v-btn>
         <v-spacer></v-spacer>
-        <v-btn icon @click="ThreeD = !ThreeD">
+        <v-btn :disabled="show == true" icon @click="ThreeD = !ThreeD">
           <v-icon size="25" class="grey--text text--darken-1">
             {{ ThreeD ? "mdi-view-module" : "mdi-view-carousel" }}
           </v-icon>
         </v-btn>
         <v-btn icon @click="show = !show">
-          <v-icon
-            :class="
-              show ? 'red--text text--darken-1' : 'grey--text text--darken-1'
-            "
-            size="25"
-          >
-            mdi-video
+          <v-icon size="25" class="grey--text text--darken-1">
+            {{ show ? "mdi-image" : "mdi-video-box" }}
           </v-icon>
         </v-btn>
       </v-toolbar>
@@ -28,52 +23,107 @@
       <v-card
         class="mx-auto card-box"
         max-width="90%"
-        style="margin-top: -45px"
+        style="margin-top: -50px"
       >
         <v-toolbar flat>
           <v-toolbar-title class="grey--text subheader-titel">
             AUTOMOTIVE DESIGN & STYLING
           </v-toolbar-title>
-          <!-- <v-spacer></v-spacer>
-          <v-btn icon @click="ThreeD = !ThreeD">
-            <v-icon size="30">
-              {{ ThreeD ? "mdi-view-module" : "mdi-view-carousel" }}
-            </v-icon>
-          </v-btn>
-          <v-btn icon @click="show = !show">
-            <v-icon size="30" class="red--text"> mdi-video </v-icon>
-          </v-btn> -->
         </v-toolbar>
         <v-divider></v-divider>
         <v-sheet class="overflow-hidden">
           <v-container fluid class="">
             <!-- video  -->
-            <v-slide-y-transition>
-              <v-sheet class="pa-4 pt-0" v-show="show">
-                <v-card-actions class="justify-center">
-                  <iframe
-                    width="350"
-                    height="215"
-                    src="https://www.youtube.com/embed/IQw-4JABPCM"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
-                </v-card-actions>
-              </v-sheet>
-            </v-slide-y-transition>
-            <!-- 3D images  -->
-            <v-col v-if="ThreeD" cols="12">
-              <div class="example-3d">
-                <swiper v-model="active" class="swiper" :options="swiperOption">
-                  <swiper-slide v-for="n in 12" :key="n">
+            <v-sheet class="pa-4 pt-0" v-if="show == true">
+              <v-card-actions class="justify-center">
+                <iframe
+                  width="350"
+                  height="215"
+                  src="https://www.youtube.com/embed/IQw-4JABPCM"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </v-card-actions>
+            </v-sheet>
+            <!-- images  -->
+            <div v-if="show == false">
+              <!-- 3D images  -->
+              <v-col v-if="ThreeD" cols="12">
+                <div class="example-3d">
+                  <swiper
+                    v-model="active"
+                    class="swiper"
+                    :options="swiperOption"
+                  >
+                    <swiper-slide v-for="n in 12" :key="n">
+                      <v-img
+                        :src="`https://picsum.photos/500/300?image=${
+                          n * 5 + 10
+                        }`"
+                        :lazy-src="`https://picsum.photos/10/6?image=${
+                          n * 5 + 10
+                        }`"
+                        aspect-ratio="1.2"
+                        contain
+                      >
+                        <template v-slot:placeholder>
+                          <v-row
+                            class="fill-height ma-0"
+                            align="center"
+                            justify="center"
+                          >
+                            <v-progress-circular
+                              indeterminate
+                              color="grey lighten-5"
+                            ></v-progress-circular>
+                          </v-row>
+                        </template>
+                      </v-img>
+                    </swiper-slide>
+                    <div
+                      class="swiper-button-prev swiper-button-white hidden-sm-and-down"
+                      slot="button-prev"
+                    >
+                      <v-icon class="light-blue--text text--darken-1" size="30">
+                        mdi-chevron-left
+                      </v-icon>
+                    </div>
+                    <div
+                      class="swiper-button-next swiper-button-white hidden-sm-and-down"
+                      slot="button-next"
+                    >
+                      <v-icon class="light-blue--text text--darken-1" size="30">
+                        mdi-chevron-right
+                      </v-icon>
+                    </div>
+                  </swiper>
+                </div>
+              </v-col>
+              <!-- list image  -->
+              <v-responsive
+                style="overflow-y: scroll"
+                height="300"
+                v-if="ThreeD == false"
+              >
+                <v-row>
+                  <v-col
+                    v-for="n in 12"
+                    :key="n"
+                    class="d-flex child-flex pa-1"
+                    md="3"
+                    lg="3"
+                    sm="3"
+                    cols="6"
+                  >
                     <v-img
                       :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
                       :lazy-src="`https://picsum.photos/10/6?image=${
                         n * 5 + 10
                       }`"
-                      aspect-ratio="1.2"
+                      aspect-ratio="1.9"
+                      class="grey lighten-2"
                       contain
                     >
                       <template v-slot:placeholder>
@@ -89,65 +139,11 @@
                         </v-row>
                       </template>
                     </v-img>
-                  </swiper-slide>
-                  <div
-                    class="swiper-button-prev swiper-button-white hidden-sm-and-down"
-                    slot="button-prev"
-                  >
-                    <v-icon class="light-blue--text text--darken-1" size="30">
-                      mdi-chevron-left
-                    </v-icon>
-                  </div>
-                  <div
-                    class="swiper-button-next swiper-button-white hidden-sm-and-down"
-                    slot="button-next"
-                  >
-                    <v-icon class="light-blue--text text--darken-1" size="30">
-                      mdi-chevron-right
-                    </v-icon>
-                  </div>
-                </swiper>
-              </div>
-            </v-col>
-            <!-- list image  -->
-            <v-responsive
-              style="overflow-y: scroll"
-              height="300"
-              v-if="ThreeD == false"
-            >
-              <v-row>
-                <v-col
-                  v-for="n in 12"
-                  :key="n"
-                  class="d-flex child-flex pa-1"
-                  md="3"
-                  lg="3"
-                  sm="3"
-                  cols="6"
-                >
-                  <v-img
-                    :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
-                    :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`"
-                    aspect-ratio="1.9"
-                    class="grey lighten-2"
-                    contain
-                  >
-                    <template v-slot:placeholder>
-                      <v-row
-                        class="fill-height ma-0"
-                        align="center"
-                        justify="center"
-                      >
-                        <v-progress-circular
-                          indeterminate
-                          color="grey lighten-5"
-                        ></v-progress-circular>
-                      </v-row>
-                    </template>
-                  </v-img>
-                </v-col>
-              </v-row>
-            </v-responsive>
+                  </v-col>
+                </v-row>
+              </v-responsive>
+            </div>
+
             <v-col class="px-0" cols="12">
               <v-card-text class="Service_text py-2 px-0">
                 <v-subheader
@@ -261,7 +257,7 @@ export default {
 <style lang="scss" scoped>
 @import "@/scss/virables";
 @import "@/scss/mixin";
-.Section {
+.Section-info {
   width: 100%;
   min-height: 100vh;
   padding-bottom: 30px;
@@ -364,4 +360,7 @@ export default {
 // ::v-deep .swiper-slide.swiper-slide-prev {
 //   transform: translate3d(0px, 0px, -100px) rotateX(0deg) rotateY(40deg) scale(1) !important;
 // }
+::v-deep .theme--dark.v-btn.v-btn--disabled .v-icon {
+  color: #bdbdbd !important;
+}
 </style>

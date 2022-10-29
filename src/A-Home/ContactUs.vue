@@ -1,99 +1,102 @@
 <template>
-  <div>
+  <div class="Section">
     <v-container>
-      <div class="Section">
-        <v-col cols="12" class="pa-0">
-          <span class="title"> Contact Us </span>
-          <v-row class="mt-4">
-            <v-col cols="12" md="6" lg="6">
-              <v-card class="mx-auto" height="100%">
-                <v-form ref="form" v-model="form" class="pa-4 pt-6">
-                  <v-text-field
-                    v-model="phone"
-                    filled
-                    color="light-blue darken-1"
-                    label="Your Name *"
-                  ></v-text-field>
-                  <v-text-field
-                    v-model="phone"
-                    filled
-                    color="light-blue darken-1"
-                    label="Phone Number *"
-                  ></v-text-field>
-                  <v-text-field
-                    v-model="phone"
-                    filled
-                    color="light-blue darken-1"
-                    label="subject *"
-                  ></v-text-field>
-                  <v-text-field
-                    v-model="email"
-                    :rules="[rules.email]"
-                    filled
-                    color="light-blue darken-1"
-                    label="Email address *"
-                    type="email"
-                  ></v-text-field>
-                  <v-textarea
-                    auto-grow
-                    filled
-                    color="light-blue darken-1"
-                    label="Your Message *"
-                    rows="1"
-                  ></v-textarea>
-                </v-form>
-                <v-divider></v-divider>
-                <v-card-actions>
-                  <v-btn class="Send-email" text @click="$refs.form.reset()">
-                    Clear
-                  </v-btn>
-                  <v-spacer></v-spacer>
-                  <v-btn
-                    :disabled="!form"
-                    :loading="isLoading"
-                    class="white--text Send-email"
-                    color="light-blue darken-1"
-                    depressed
-                  >
-                    send email
-                  </v-btn>
-                </v-card-actions>
-              </v-card>
-            </v-col>
-            <v-col cols="12" md="6" lg="6">
-              <v-card flat height="100%" class="mx-auto">
-                <v-list three-line class="pa-0">
-                  <template v-for="(item, index) in items">
-                    <v-subheader
-                      class="text"
-                      v-if="item.header"
-                      :key="item.header"
-                      v-text="item.header"
-                    ></v-subheader>
-                    <v-divider
-                      v-else-if="item.divider"
-                      :key="index"
-                      :inset="item.inset"
-                    ></v-divider>
-                    <v-list-item v-else :key="item.title">
-                      <v-list-item-content>
-                        <v-list-item-title
-                          class="text"
-                          v-html="item.title"
-                        ></v-list-item-title>
-                        <v-list-item-subtitle
-                          class="text"
-                          v-html="item.subtitle"
-                        ></v-list-item-subtitle>
-                      </v-list-item-content>
-                    </v-list-item>
-                  </template>
-                </v-list>
-              </v-card>
-            </v-col>
-          </v-row>
+      <span class="title"> Contact Us </span>
+      <v-row class="mt-4">
+        <v-col cols="12" md="6" lg="6">
+          <v-card tile class="mx-auto" height="100%">
+            <v-form ref="form" v-model="form" class="pa-4 pt-6">
+              <v-text-field
+                v-model="phone"
+                filled
+                color="light-blue darken-1"
+                label="Your Name *"
+              ></v-text-field>
+              <v-text-field
+                v-model="phone"
+                filled
+                color="light-blue darken-1"
+                label="Phone Number *"
+              ></v-text-field>
+              <v-text-field
+                v-model="phone"
+                filled
+                color="light-blue darken-1"
+                label="subject *"
+              ></v-text-field>
+              <v-text-field
+                v-model="email"
+                :rules="[rules.email]"
+                filled
+                color="light-blue darken-1"
+                label="Email address *"
+                type="email"
+              ></v-text-field>
+              <v-textarea
+                auto-grow
+                filled
+                color="light-blue darken-1"
+                label="Your Message *"
+                rows="1"
+              ></v-textarea>
+            </v-form>
+            <v-divider></v-divider>
+            <v-card-actions>
+              <v-btn class="Send-email" text @click="$refs.form.reset()">
+                Clear
+              </v-btn>
+              <v-spacer></v-spacer>
+              <v-btn
+                :disabled="!form"
+                :loading="isLoading"
+                class="white--text Send-email"
+                color="light-blue darken-1"
+                depressed
+              >
+                send email
+              </v-btn>
+            </v-card-actions>
+          </v-card>
         </v-col>
-      </div>
+        <v-col cols="12" md="6" lg="6">
+          <v-card tile min-height="50vh" class="mx-auto">
+            <v-list three-line class="pa-0">
+              <template v-for="(item, index) in items">
+                <v-subheader
+                  class="text"
+                  v-if="item.header"
+                  :key="item.header"
+                  v-text="item.header"
+                ></v-subheader>
+                <v-divider
+                  v-else-if="item.divider"
+                  :key="index"
+                  :inset="item.inset"
+                ></v-divider>
+                <v-list-item v-else :key="item.title">
+                  <v-list-item-content>
+                    <v-list-item-title
+                      class="text"
+                      v-html="item.title"
+                    ></v-list-item-title>
+                    <v-list-item-subtitle
+                      class="text"
+                      v-html="item.subtitle"
+                    ></v-list-item-subtitle>
+                  </v-list-item-content>
+                </v-list-item>
+              </template>
+            </v-list>
+            <v-sheet
+              class="d-flex justify-center align-center"
+              height="265px"
+              max-width="100%"
+            >
+              <v-img src="../assets/CADelaide-Logo.png" max-width="350"></v-img>
+            </v-sheet>
+          </v-card>
+        </v-col>
+      </v-row>
     </v-container>
   </div>
 </template>
@@ -150,10 +153,7 @@ export default {
 .Section {
   width: 100%;
   min-height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 
   .title {
     font-family: $fontfamliy !important;

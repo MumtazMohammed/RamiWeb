@@ -125,25 +125,6 @@
                   ENGINEERING DESIGN PROCESS
                 </v-list-item-title>
               </v-list-item>
-              <v-list-item
-                v-scroll-to="{
-                  el: '#Strengths',
-                  duration: 500,
-                  lazy: false,
-                  easing: 'linear',
-                  offset: -80,
-                  force: true,
-                  cancelable: true,
-                  onStart: onStart,
-                  onDone: onDone,
-                  onCancel: onCancel,
-                  x: false,
-                  y: true,
-                }"
-                link
-              >
-                <v-list-item-title> our Strengths </v-list-item-title>
-              </v-list-item>
             </v-list>
           </v-menu>
           <v-tab
@@ -183,9 +164,7 @@
     <div id="PROCESS">
       <ENGINEERINGDESIGNPROCESS />
     </div>
-    <div id="Strengths">
-      <ExperienceStrength />
-    </div>
+
     <div id="contact">
       <ContactUs />
     </div>
@@ -198,7 +177,6 @@ import ServiceCard from "../A-Home/ServiceCard.vue";
 import WhatWeDo from "../A-Home/WhatWeDo.vue";
 import OURCADEXPERTISE from "../A-Home/OURCADEXPERTISE.vue";
 import ENGINEERINGDESIGNPROCESS from "../A-Home/ENGINEERINGDESIGNPROCESS.vue";
-import ExperienceStrength from "../A-Home/ExperienceStrength.vue";
 import ContactUs from "../A-Home/ContactUs.vue";
 const components = {
   WelcomePage,
@@ -207,7 +185,6 @@ const components = {
   OURCADEXPERTISE,
   ENGINEERINGDESIGNPROCESS,
   ContactUs,
-  ExperienceStrength,
 };
 export default {
   name: "Home",
