@@ -111,7 +111,7 @@ export default {
     bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #29B6F6;
+    background-color: $color-1;
     border-radius: 50px;
   }
   .card_text {

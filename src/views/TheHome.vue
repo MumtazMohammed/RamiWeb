@@ -16,13 +16,13 @@
       <template v-slot:extension>
         <v-tabs
           dark
-          active-class=" light-blue--text font-weight-medium text--lighten-1"
+          active-class=" light-blue--text font-weight-medium text--darken-1"
           show-arrows=""
           center-active
           centered
           grow
           slider-size="2.5"
-          slider-color="light-blue lighten-1"
+          slider-color="light-blue darken-1"
           align-with-title
         >
           <v-tab
@@ -125,6 +125,25 @@
                   ENGINEERING DESIGN PROCESS
                 </v-list-item-title>
               </v-list-item>
+              <v-list-item
+                v-scroll-to="{
+                  el: '#Strengths',
+                  duration: 500,
+                  lazy: false,
+                  easing: 'linear',
+                  offset: -80,
+                  force: true,
+                  cancelable: true,
+                  onStart: onStart,
+                  onDone: onDone,
+                  onCancel: onCancel,
+                  x: false,
+                  y: true,
+                }"
+                link
+              >
+                <v-list-item-title> our Strengths </v-list-item-title>
+              </v-list-item>
             </v-list>
           </v-menu>
           <v-tab
@@ -143,8 +162,9 @@
               y: true,
             }"
             class="tab"
-            >contact</v-tab
           >
+            contact
+          </v-tab>
         </v-tabs>
       </template>
     </v-app-bar>
@@ -163,6 +183,9 @@
     <div id="PROCESS">
       <ENGINEERINGDESIGNPROCESS />
     </div>
+    <div id="Strengths">
+      <ExperienceStrength />
+    </div>
     <div id="contact">
       <ContactUs />
     </div>
@@ -175,6 +198,7 @@ import ServiceCard from "../A-Home/ServiceCard.vue";
 import WhatWeDo from "../A-Home/WhatWeDo.vue";
 import OURCADEXPERTISE from "../A-Home/OURCADEXPERTISE.vue";
 import ENGINEERINGDESIGNPROCESS from "../A-Home/ENGINEERINGDESIGNPROCESS.vue";
+import ExperienceStrength from "../A-Home/ExperienceStrength.vue";
 import ContactUs from "../A-Home/ContactUs.vue";
 const components = {
   WelcomePage,
@@ -183,6 +207,7 @@ const components = {
   OURCADEXPERTISE,
   ENGINEERINGDESIGNPROCESS,
   ContactUs,
+  ExperienceStrength,
 };
 export default {
   name: "Home",
@@ -248,6 +273,6 @@ export default {
   min-width: 40px;
 }
 ::v-deep i.v-icon.notranslate.material-icons.theme--dark {
-  color: #f57f17 !important;
+  color: $color-1 !important;
 }
 </style>

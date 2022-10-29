@@ -3,7 +3,7 @@
     <v-container class="pa-0">
       <v-icon class="icon">mdi-cog</v-icon>
       <h1 class="welcome-titel px-2">
-        Welcome to <span class="light-blue--text text--lighten-1">Cad</span>elaie
+        Welcome to <span class="light-blue--text text--darken-1">Cad</span>elaie
       </h1>
       <v-subheader class="px-2 titel-welcom">
         <TypeEfect />
@@ -36,12 +36,13 @@ export default {
 @import "@/scss/mixin";
 .selection {
   width: 100%;
-  margin-top: 140px;
-  min-height: 43vh;
+  margin-top: 135.5px;
+  min-height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  // background-color: #343434;
 
   .titel-welcom {
     font-family: $fontfamliy !important;

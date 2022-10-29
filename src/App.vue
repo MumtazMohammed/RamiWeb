@@ -15,7 +15,7 @@
           <v-btn
             v-for="icon in icons"
             :key="icon"
-            class="mx-4 light-blue--text text--lighten-1"
+            class="mx-4 light-blue--text text--darken-1"
             icon
           >
             <v-icon size="24px">

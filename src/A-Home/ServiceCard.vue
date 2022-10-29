@@ -61,7 +61,7 @@
               y: true,
             }"
             class="pagination mb-2"
-            color="light-blue lighten-1"
+            color="light-blue darken-1"
             v-model="page"
             :length="pages"
             @input="updatePage"
@@ -184,12 +184,12 @@ export default {
     bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #29b6f6;
+    background-color: $color-1;
     border-radius: 50px;
   }
 
   .icon-icon {
-    background-color: #29b6f6;
+    background-color: $color-1;
     color: rgb(255, 255, 255);
     border-radius: 50%;
     padding: 3px;

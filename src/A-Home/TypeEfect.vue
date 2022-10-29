@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="TypeEfect">
     <h1>
       <!-- <span class="typed-text">{{ typeValue }}</span> -->
       <h1>
@@ -89,7 +89,7 @@ h1 {
     font-size: 20px;
   }
   span.typed-text {
-    color: #29B6F6;
+    color: $color-1;
     position: relative;
   }
   span.typed-text::after {
@@ -99,8 +99,8 @@ h1 {
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    height: 2px;
-    background-color: #29B6F6;
+    height: 3px;
+    background-color: $color-1;
     border-radius: 50px;
   }
 }

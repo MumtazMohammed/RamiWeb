@@ -11,33 +11,33 @@
                   <v-text-field
                     v-model="phone"
                     filled
-                    color="light-blue lighten-1"
+                    color="light-blue darken-1"
                     label="Your Name *"
                   ></v-text-field>
                   <v-text-field
                     v-model="phone"
                     filled
-                    color="light-blue lighten-1"
+                    color="light-blue darken-1"
                     label="Phone Number *"
                   ></v-text-field>
                   <v-text-field
                     v-model="phone"
                     filled
-                    color="light-blue lighten-1"
+                    color="light-blue darken-1"
                     label="subject *"
                   ></v-text-field>
                   <v-text-field
                     v-model="email"
                     :rules="[rules.email]"
                     filled
-                    color="light-blue lighten-1"
+                    color="light-blue darken-1"
                     label="Email address *"
                     type="email"
                   ></v-text-field>
                   <v-textarea
                     auto-grow
                     filled
-                    color="light-blue lighten-1"
+                    color="light-blue darken-1"
                     label="Your Message *"
                     rows="1"
                   ></v-textarea>
@@ -52,7 +52,7 @@
                     :disabled="!form"
                     :loading="isLoading"
                     class="white--text Send-email"
-                    color="light-blue lighten-1"
+                    color="light-blue darken-1"
                     depressed
                   >
                     send email
@@ -178,7 +178,7 @@ export default {
     bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #29b6f6;
+    background-color: $color-1;
     border-radius: 50px;
   }
   .text {
